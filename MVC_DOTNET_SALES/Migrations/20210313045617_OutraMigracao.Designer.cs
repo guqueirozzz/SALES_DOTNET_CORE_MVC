@@ -3,14 +3,16 @@ using System;
 using MVC_DOTNET_SALES.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MVC_DOTNET_SALES.Migrations
 {
     [DbContext(typeof(MVC_DOTNET_SALESContext))]
-    partial class MVC_DOTNET_SALESContextModelSnapshot : ModelSnapshot
+    [Migration("20210313045617_OutraMigracao")]
+    partial class OutraMigracao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
