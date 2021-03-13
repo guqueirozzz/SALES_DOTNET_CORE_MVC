@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using MVC_DOTNET_SALES.Data;
 using MVC_DOTNET_SALES.Models;
 
+/* *************************** Aula CRUD SCAFFOLDING ****************************************** */
+
 namespace MVC_DOTNET_SALES.Controllers
 {
     public class DepartamentosController : Controller
