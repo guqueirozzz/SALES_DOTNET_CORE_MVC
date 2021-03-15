@@ -21,6 +21,6 @@ namespace MVC_DOTNET_SALES.Data
 
         /* ******************* Digitar comandos abaixo no Package Manage Console **************************** */
         // para adicionar nova migration do MySQl: Add-Migration NomeMigração
-        // Para atualizar o banco de dados, e aparecer as novas tabelas do MySQL: Update-Databse
+        // Para atualizar o banco de dados, e aparecer as novas tabelas do MySQL: Update-Database
     }
 }

@@ -39,15 +39,20 @@ namespace MVC_DOTNET_SALES
             services.AddDbContext<MVC_DOTNET_SALESContext>
                 (options => options.UseMySql(Configuration.GetConnectionString("MVC_DOTNET_SALESContext"), builder => builder.MigrationsAssembly("MVC_DOTNET_SALES")));
 
+
+            // Registro do serviço no sistema de injeção de dependencias. SeedingServices é a classe que popula as tabelas do MySQL
+            services.AddScoped<SeedingService>();
+
             
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService seedingservice)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                seedingservice.Alimentar();
             }
             else
             {
