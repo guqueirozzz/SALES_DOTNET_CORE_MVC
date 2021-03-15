@@ -16,10 +16,20 @@ namespace MVC_DOTNET_SALES.Services
             _context = context;
         }
 
-        public List<Seller> FindAll()
+        public List<Seller> BuscarTodosVendedores()
         {
-            // retornando do banco de dados, todos os vendedores
+            // retornando do banco de dados para a tela, todos os vendedores
             return _context.Vendedor.ToList();
         }
+
+        // Notas: a classe MVC_DOTNET_SALESContext herda de Dbset, que por sua vez, tem o método "Add()"
+        public void Inserir(Seller vend)
+        {
+            // Adicionando novos vendedores no banco de dados
+            _context.Add(vend);
+            _context.SaveChanges();
+        }
+
+
     }
 }
