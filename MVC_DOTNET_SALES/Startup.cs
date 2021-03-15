@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MVC_DOTNET_SALES.Data;
+using MVC_DOTNET_SALES.Services;
 
 namespace MVC_DOTNET_SALES
 {
@@ -42,6 +43,7 @@ namespace MVC_DOTNET_SALES
 
             // Registro do serviço no sistema de injeção de dependencias. SeedingServices é a classe que popula as tabelas do MySQL
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
             
         }
